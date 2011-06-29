@@ -16,6 +16,9 @@ set numwidth 15
 -- Display PL/SQL output
 set serveroutput on size unlimited
 
+-- Display the time in the command prompt
+set time on
+
 --
 -- Editing
 --
@@ -26,12 +29,11 @@ set editfile /tmp/tmpsqlplus.sql
 -- Spooling
 --
 
--- Echo SQL statements to spool file
-set echo on
-
 -- Print elapsed time for each statement
 set timing on
 
 -- Trim trailing whitespace when spooling
 set trimspool off
 
+-- Echo SQL statements to spool file
+set echo on
