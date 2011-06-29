@@ -16,8 +16,8 @@ set numwidth 15
 --
 -- Editing
 --
-def _editor=vi
-set editf /tmp/tmpsqlplus.sql
+define _editor=vi
+set editfile /tmp/tmpsqlplus.sql
 
 --
 -- Spooling
