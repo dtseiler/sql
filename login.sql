@@ -8,10 +8,13 @@ set tab off
 set verify off
 
 -- Do not truncate long
-set long 999999 longc 999999
+set long 999999 longchunksize 999999
 
 -- Display full numbers up to 15 chars
 set numwidth 15
+
+-- Display PL/SQL output
+set serveroutput on size unlimited
 
 --
 -- Editing
