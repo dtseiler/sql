@@ -35,6 +35,7 @@ define _editor=vi
 set feedback off
 
 -- Use /tmp as location for edit file
+-- Use _date in name to avoid collisions
 -- XXX Security risk, can we put this into eg $SQLPATH/.tmp/ ?
 alter session set nls_date_format='yyyymmddhh24miss';
 set editfile /tmp/tmpsp.&&_date
