@@ -4,6 +4,15 @@
 
 -- To use, place login.sql in directory specified by SQLPATH env var.
 
+--
+-- References & Inspirations
+--
+-- Tim Hall: http://www.oracle-base.com/dba/Script.php?category=miscellaneous&file=login.sql
+-- Laurent Schneider: http://laurentschneider.com/wordpress/2005/06/loginsql.html
+-- SET http://download.oracle.com/docs/cd/E11882_01/server.112/e16604/ch_twelve040.htm#SQPUG060
+-- DEFINE http://download.oracle.com/docs/cd/E11882_01/server.112/e16604/ch_twelve017.htm#SQPUG037
+
+
 -- Better safe than sorry
 set autocommit off
 
@@ -12,6 +21,12 @@ set tab off
 
 -- Do not show variable substition
 set verify off
+
+-- Remove trailing blanks in display
+set trimout on
+
+-- Display subscript output
+set termout on
 
 -- Do not truncate long
 set long 999999 longchunksize 999999
@@ -35,10 +50,9 @@ define _editor=vi
 -- Quiet while we're working
 set feedback off
 
--- Use /tmp as location for edit file
--- Use _date in name to avoid collisions
+-- Use /tmp as location for editfile and _date in name to avoid collisions
 -- XXX Security risk, can we put this into eg $SQLPATH/.tmp/ ?
---     -- No because SQLPATH can be a semicolon delimited list, eg $PATH
+--     * No because SQLPATH can be a semicolon delimited list, eg $PATH
 alter session set nls_date_format='yyyymmddhh24miss';
 set editfile /tmp/tmpsp.&&_date
 
