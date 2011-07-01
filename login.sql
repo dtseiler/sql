@@ -21,10 +21,8 @@
 set feedback off
 set termout off
 
--- Set prompt to user@instance
-column x new_value y
-select lower(user || '@' || sys_context('userenv', 'instance_name')) x from dual;
-set sqlprompt '&Y> '
+-- Set prompt to user@connection
+set sqlprompt "_user'@'_connect_identifier > "
 
 -- Some common column resizes
 column file_name format a60
