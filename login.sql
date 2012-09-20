@@ -1,6 +1,5 @@
 -- login.sql
 -- Don Seiler, don@seiler.us
--- The Pythian Group, http://www.pythian.com
 
 -- To use, place login.sql in directory specified by SQLPATH env var.
 
