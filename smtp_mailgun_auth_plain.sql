@@ -1,4 +1,5 @@
 -- Testing SMTP sending via mailgun with PLAIN auth
+-- You need to have a Mailgun account (obviously)
 
 set serveroutput on;
 
