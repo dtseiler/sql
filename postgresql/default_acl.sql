@@ -1,3 +1,4 @@
+-- From https://www.dba-ninja.com/2020/06/how-to-find-default-access-privileges-on-postgresql-with-pg_default_acl.html
 select 
 	pg_get_userbyid(d.defaclrole) as user, 
 	n.nspname as schema, 
