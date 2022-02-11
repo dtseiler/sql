@@ -6,6 +6,7 @@ select
 	case d.defaclobjtype 
 		when 'r' then 'tables' 
 		when 'f' then 'functions' 
+		when 'S' then 'sequences' 
 	end as object_type,
 	array_to_string(d.defaclacl, ' + ')  as default_privileges 
 from pg_catalog.pg_default_acl d 
