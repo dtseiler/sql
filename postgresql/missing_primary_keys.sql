@@ -21,6 +21,7 @@ WHERE
             'dbo',
             'information_schema'
         ]
-    );
+    )
+ORDER BY 1, 2;
 
 /* vim: set expandtab:ts=4:sw=4 */
