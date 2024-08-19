@@ -1,4 +1,5 @@
 select datname, 
+    pg_get_userbyid(datdba) as owner,
     pg_encoding_to_char(encoding) as encoding, 
     datcollate, 
     datctype, 
